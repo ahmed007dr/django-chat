@@ -8,7 +8,7 @@ from .forms import SingUpForm
 def frontpage(request):
     return render(request , 'core/frontpage.html')
 
-def singup(request):
+def signup(request):
     if request.method == 'POST':
         form = SingUpForm(request.POST)
 
@@ -19,4 +19,4 @@ def singup(request):
     else:
         form = SingUpForm()
 
-    return render (request,'core/singup.html',{'form':form})
+    return render (request,'core/signup.html',{'form':form})
